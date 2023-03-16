@@ -7,12 +7,18 @@ import TextInput from "@/Components/TextInput.vue";
 import { Head, Link, useForm } from "@inertiajs/vue3";
 import VueMultiselect from "vue-multiselect";
 
+defineProps({
+    roles: Array,
+    permissions: Array,
+});
+
 const form = useForm({
     name: "",
     email: "",
     password: "",
     password_confirmation: "",
-    terms: false,
+    role: [],
+    permissions: [],
 });
 
 const submit = () => {
